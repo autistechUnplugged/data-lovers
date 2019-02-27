@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    width: 100vw;
+}
+
+#logoImage {
+    width: 15vw;
+}
+
+.radio-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+.menuLateral {
+    width: 20%;
+    background-color: aqua;
+}
+.pokemon {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
