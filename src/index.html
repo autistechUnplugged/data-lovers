@@ -12,14 +12,22 @@
     <aside class="menuLateral">
       <nav>
         <p>Ordernar</p>
-        <input type="radio" class="radio-menu" id="idOrder-1to151" checked="checked">
-        <label for="idOrder-1to151">Id - menor para maior</label>
-        <input type="radio" class="radio-menu" id="idOrder-151to1">
-        <label for="idOrder-151to1">Id - maior para menor</label>
-        <input type="radio" class="radio-menu" id="alphOrder-AtoZ">
-        <label for="alphOrder-AtoZ">Alfabética - A-Z</label>
-        <input type="radio" class="radio-menu" id="alphOrder-ZtoA">
-        <label for="alphOrder-ZtoA">Alfabética - Z-A</label>
+        <div class="">
+          <input type="radio" name="order" class="radio-menu" id="idOrder-1to151" checked="checked">
+          <label for="idOrder-1to151">Id - menor para maior</label>
+        </div>
+        <div>
+          <input type="radio" name="order" class="radio-menu" id="idOrder-151to1">
+          <label for="idOrder-151to1">Id - maior para menor</label>
+        </div>
+        <div>
+          <input type="radio" name="order" class="radio-menu" id="alphOrder-AtoZ">
+          <label for="alphOrder-AtoZ">Alfabética - A-Z</label>
+        </div>
+        <div>
+          <input type="radio" name="order" class="radio-menu" id="alphOrder-ZtoA">
+          <label for="alphOrder-ZtoA">Alfabética - Z-A</label>
+        </div>        
 
         <p>Filtrar</p>
         <input type="checkbox" class="check-menu" id="pokemonType">
@@ -33,7 +41,7 @@
 
     <main>
       <section id=pokemonList>
-        <div id="pokemon-div" class="pokemon"></div>
+        <div id="eachPokemon" class="pokemon"></div>
       </section>
     </main>
 
