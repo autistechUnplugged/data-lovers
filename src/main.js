@@ -1,15 +1,19 @@
+const pokemonData = POKEMON["pokemon"];
 const checkAtoZ = document.getElementById("alphOrderAtoZ");
 const checkZtoA = document.getElementById("alphOrderZtoA");
+const one = document.getElementById("one");
+const two = document.getElementById("two");
 
 window.onload = function () {
     goPokemons();
 };
 
 function getPokemons() {
-    return POKEMON["pokemon"];
+    return pokemonData;
 };
 
 function goPokemons() {
+    let eachPokemon = document.getElementById("eachPokemon");
     eachPokemon.innerHTML = `
     ${getPokemons().map((number) => `
         <div class="pokemon-card">
@@ -31,10 +35,10 @@ function goPokemons() {
         </div>
        `).join("")}
        `
-}
+};
 
-function sortingPokemons() {
-    let sorted = POKEMON["pokemon"].sort(function(a,b) {
+function sortingPokemonsUp() {
+    let sorted = pokemonData.sort(function(a,b) {
         let nameA = a.name.toUpperCase();
         let nameB = b.name.toUpperCase();
         if (nameA < nameB) {
@@ -45,8 +49,24 @@ function sortingPokemons() {
         }
         return 0;
     });
-    sorted.reverse();
+    goPokemons();
+ }; 
+
+ one.addEventListener("click", sortingPokemonsUp());
+ 
+/* function sortedUp() {
+    let sorted = pokemonData.sort(function(a,b) {
+        return a.name.toLowerCase().localeCompare(b.name.toLowerCase());
+    });
+    return goPokemons();
 }
 
-checkAtoZ.addEventListener("click", sortingPokemons);
-checkZtoA.addEventListener("click", sortingPokemons); 
+function sortedDown() {
+    let sortedDown = pokemonData.sort(function(a,b) {
+        a.name.toLowerCase().localeCompare(b.name.toLowerCase());
+    });
+    return goPokemons();
+}
+
+one.addEventListener("click", sortedUp);
+two.addEventListener("click", sortedDown); */
