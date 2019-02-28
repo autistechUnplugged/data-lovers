@@ -6,13 +6,47 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <!-- <script src="./data/injuries/injuries.js"></script> -->
-    <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-    <!-- <script src="./data/steam/steam.js"></script> -->
-    <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-    <!-- <script src="./data/lol/lol.js"></script> -->
-    <script src="data.js"></script>
+    <header>
+      <img id="logoImage" src="img/pokemon-logo.png" alt="Logo ">
+    </header>
+    <aside class="menuLateral">
+      <nav>
+        <p>Ordernar</p>
+        <div class="">
+          <input type="radio" name="order" class="radio-menu" id="idOrder1to151" checked="checked">
+          <label for="idOrder-1to151">Id - menor para maior</label>
+        </div>
+        <div>
+          <input type="radio" name="order" class="radio-menu" id="idOrder151to1">
+          <label for="idOrder-151to1">Id - maior para menor</label>
+        </div>
+        <div>
+          <input type="radio" name="order" class="radio-menu" id="alphOrderAtoZ" onchange="sortingPokemons()">
+          <label for="alphOrder-AtoZ">Alfabética - A-Z</label>
+        </div>
+        <div>
+          <input type="radio" name="order" class="radio-menu" id="alphOrderZtoA" onchange="sortingPokemons()">
+          <label for="alphOrder-ZtoA">Alfabética - Z-A</label>
+        </div>        
+
+        <p>Filtrar</p>
+        <input type="checkbox" class="check-menu" id="pokemonType">
+        <label for="pokemonType">Tipo de Pokémon</label>
+        <input type="checkbox" class="check-menu" id="pokemonWeakness">
+        <label for="pokemonWeakness">Fraquezas</label>
+
+        <p>Curiosidades</p>
+      </nav>
+    </aside>
+
+    <main>
+      <section id=pokemonList>
+        <div id="eachPokemon"></div>
+      </section>
+    </main>
+
+    <script src="./data/pokemon/pokemon.js"></script>
+   <!--  <script src="data.js"></script> -->
     <script src="main.js"></script>
   </body>
 </html>
