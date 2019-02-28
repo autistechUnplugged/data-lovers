@@ -14,7 +14,6 @@ function getPokemons() {
 };
 
 function goPokemons() {
-    let eachPokemon = document.getElementById("eachPokemon");
     eachPokemon.innerHTML = `
     ${getPokemons().map((number) => `
         <div class="pokemon-card">
@@ -55,8 +54,7 @@ function orderPokemonDown() {
         return b.num - a.num;
     });
     return goPokemons();
-}
-
+};
 
 function sortingPokemonsUp() {
     pokemonData.sort(function(a,b) {
@@ -89,4 +87,4 @@ function sortingPokemonsUp() {
  }; 
 
 checkAtoZ.addEventListener("click", sortingPokemonsUp);
-checkZtoA.addEventListener("click", sortingPokemonsDown);
+checkZtoA.addEventListener("click", sortingPokemonsDown)
