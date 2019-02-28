@@ -49,7 +49,7 @@ function sortingPokemonsUp() {
         }
         return 0;
     });
-    goPokemons();
+    return goPokemons();
  }; 
 
  one.addEventListener("click", sortingPokemonsUp());
