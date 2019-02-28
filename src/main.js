@@ -3,6 +3,10 @@ const checkAtoZ = document.getElementById("alphOrderAtoZ");
 const checkZtoA = document.getElementById("alphOrderZtoA");
 const one = document.getElementById("one");
 const two = document.getElementById("two");
+let eachPokemon = document.getElementById("eachPokemon");
+let ascOrder = document.getElementById("idOrder1to151");
+let descOrder = document.getElementById("idOrder151to1");
+
 
 window.onload = function () {
     goPokemons();
@@ -13,7 +17,6 @@ function getPokemons() {
 };
 
 function goPokemons() {
-    let eachPokemon = document.getElementById("eachPokemon");
     eachPokemon.innerHTML = `
     ${getPokemons().map((number) => `
         <div class="pokemon-card">
@@ -36,6 +39,14 @@ function goPokemons() {
        `).join("")}
        `
 };
+
+ascOrder.addEventListener('click', orderPokemon);
+descOrder.addEventListener('click', orderPokemon);
+
+function orderPokemon() {
+    POKEMON["pokemon"].reverse();
+    return goPokemons();
+}
 
 function sortingPokemonsUp() {
     let sorted = pokemonData.sort(function(a,b) {
@@ -70,3 +81,4 @@ function sortedDown() {
 
 one.addEventListener("click", sortedUp);
 two.addEventListener("click", sortedDown); */
+}

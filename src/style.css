@@ -1,7 +1,27 @@
+body {
+    margin: 0;
+    width: 100vw;
+}
+
+#logoImage {
+    width: 15vw;
+}
+.menu-list{
+    display: flex;
+}
+
+.menuLateral {
+    width: 20%;
+    background-color: aqua;
+}
 .pokemonList {
     display: flex;
-    width: 20vw;
-}
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
 .pokemon-card {
     display: inline-block;
