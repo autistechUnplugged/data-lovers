@@ -13,19 +13,21 @@
       <nav>
         <p>Ordernar</p>
         <div class="">
-          <input type="radio" name="order" class="radio-menu" id="idOrder-1to151" checked="checked">
+          <input type="radio" name="order" class="radio-menu" id="idOrder1to151" checked="checked">
           <label for="idOrder-1to151">Id - menor para maior</label>
         </div>
         <div>
-          <input type="radio" name="order" class="radio-menu" id="idOrder-151to1">
+          <input type="radio" name="order" class="radio-menu" id="idOrder151to1">
           <label for="idOrder-151to1">Id - maior para menor</label>
         </div>
         <div>
-          <input type="radio" name="order" class="radio-menu" id="alphOrder-AtoZ">
+          <input type="radio" name="order" class="radio-menu" id="alphOrderAtoZ">
+          <button id="one">a to z</button>
           <label for="alphOrder-AtoZ">Alfabética - A-Z</label>
         </div>
         <div>
           <input type="radio" name="order" class="radio-menu" id="alphOrder-ZtoA">
+          <button id="two" onClick="sortingPokemonsUp()">z to a</button>
           <label for="alphOrder-ZtoA">Alfabética - Z-A</label>
         </div>        
 
@@ -40,7 +42,7 @@
     </aside>
 
     <main>
-      <section id=pokemonList>
+      <section id="pokemonList">
         <div id="eachPokemon"></div>
       </section>
     </main>

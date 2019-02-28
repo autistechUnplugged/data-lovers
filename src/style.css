@@ -15,9 +15,21 @@ body {
     background-color: aqua;
 }
 .pokemonList {
+    display: flex;
     width: 80%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
+
+.pokemon-card {
+    display: inline-block;
+    flex-wrap: wrap;
+    margin: 8vw;
+    padding-top: 0.6vh;
+    padding-bottom: 0.6vh;
+    padding-left: 1.2vw;
+    padding-right: 1.2vw;
+    border: black 1px solid;
+}
