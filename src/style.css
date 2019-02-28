@@ -6,12 +6,15 @@ body {
 #logoImage {
     width: 15vw;
 }
+.menu-list{
+    display: flex;
+}
 
 .menuLateral {
     width: 20%;
     background-color: aqua;
 }
-.pokemon {
+.pokemonList {
     width: 80%;
     margin: auto;
     display: flex;
