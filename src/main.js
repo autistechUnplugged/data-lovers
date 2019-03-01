@@ -13,6 +13,8 @@ function getPokemons() {
     return pokemonData;
 };
 
+// tentar deixar isso aqui mais dinamico
+
 function goPokemons() {
     let eachPokemon = document.getElementById("eachPokemon");
     eachPokemon.innerHTML = `
@@ -29,11 +31,11 @@ function goPokemons() {
             </div>
             <h4>Tipo</h4>
             <div class="card-type">
-                <p class="pokemon-type">${number["type"].join(" - ")}</p>
+                <p class="pokemon-type">${number["type"].join(" <br> ")}</p>
             </div>
             <h4>Fraqueza</h4>
             <div class="card-weaknesses">
-                <p class="pokemon-weak">${number["weaknesses"].join(" - ")}</p>
+                <p class="pokemon-weak">${number["weaknesses"].join(" ~ ")}</p>
             </div>
         </div>
        `).join("")}
@@ -90,3 +92,6 @@ function sortingPokemonsUp() {
 
 checkAtoZ.addEventListener("click", sortingPokemonsUp);
 checkZtoA.addEventListener("click", sortingPokemonsDown);
+
+let types = pokemonData["type"];
+console.log(types);

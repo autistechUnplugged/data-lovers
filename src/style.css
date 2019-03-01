@@ -13,3 +13,11 @@
     padding-right: 1.2vw;
     border: black 1px solid;
 }
+
+.poke-type-list {
+    list-style-type: none;
+}
+
+.poke-weaknesses-list {
+    list-style-type: none;
+}
