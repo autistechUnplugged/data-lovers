@@ -95,5 +95,14 @@ checkZtoA.addEventListener("click", sortingPokemonsDown);
 let types = pokemonData["type"];
 console.log(types);
 */
-checkZtoA.addEventListener("click", sortingPokemonsDown)
+checkZtoA.addEventListener("click", sortingPokemonsDown);
 
+// função de filtro para tipo e fraqueza
+
+// um load more para os pokemons
+
+// cartãozinho com as informações
+
+// e depois as funções de filtro posteriores
+
+// gráficos
