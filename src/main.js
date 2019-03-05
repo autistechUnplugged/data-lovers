@@ -20,21 +20,21 @@ function goPokemons() {
     ${getPokemons().map((number) => `
         <div class="pokemon-card">
             <div class="card-num">
-                <h4 class="num-pokemon">${number["num"]}<h3>
+                <h4 class="pokemon-num">${number["num"]}<h4>
             </div>
             <div class="card-title">
-                <h3 class="name-pokemon">${number["name"]}</h3>
+                <h3 class="pokemon-name">${number["name"]}</h3>
             </div>
             <div class="card-img">
                 <img src="${number["img"]}" class="img-pokemon" />
             </div>
-            <h4>Tipo</h4>
             <div class="card-type">
-                <p class="pokemon-type">${number["type"].join(" <br> ")}</p>
+                <p><b>Tipo</b></p>
+                <p class="pokemon-type">${number["type"].join(" * ")}</p>
             </div>
-            <h4>Fraqueza</h4>
             <div class="card-weaknesses">
-                <p class="pokemon-weak">${number["weaknesses"].join(" ~ ")}</p>
+                <p><b>Fraqueza</b></p>
+                <p class="pokemon-weak">${number["weaknesses"].join(" * ")}</p>
             </div>
         </div>
        `).join("")}
