@@ -3,38 +3,56 @@
     padding: 0;
 }
 
+body {
+    background-image: url("http://i.imgur.com/7nCRR.png");
+    background-size: cover;
+    background-repeat: repeat;
+}
+
 .flex {
     display: flex;
     flex-direction: column;
 }
 
 .top {
-    width: 98vw;
-    height: 15vh;
-    text-align: center;
-    margin-top: 3vh;
-}
-
-.logo {
-    width: 20vw;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-content: center;
 }
 
 .wrap {
-    margin-top: 8vh;
+    margin-top: 3vh;
 }
 
 .side {
+    background-image: url("https://i.imgur.com/etp5BA5.png");
+    background-position: top;
+    background-size: cover;
     float: left;
-    width: 24vw;
-    height: auto;
-    margin-left: 3vw;
+    width: 20vw;
+    height: 60vh;
+    margin: 2vh 0vw 0vh 3vw;
     position: relative;
     font-family: 'VT323', monospace;
 }
 
+.navigation {
+    margin-top: 24vh;
+    display: none;
+}
+
+.pokedexImg {
+    width: 20vw;
+    height: 60vh;
+}
+
 .content {
     position: absolute;
-    margin-left: 26vw;
+    margin: 6vh 0vw 0vh 28vw;
+    overflow-y: auto;
+    height: 50vh;
     font-family: 'ZCOOL QingKe HuangYou', cursive;
 }
 
@@ -44,13 +62,18 @@
     justify-content: space-evenly;
 }
 
+#eachPokemon {
+    display: none;
+}
+
 .pokemon-card {
     display: inline-block;
-    margin: 0em 1.6em 2.5em 1.6em;
+    margin: 0em 1em 4em 1em;
     padding: 0.8em;
     width: 18vw;
     flex-wrap: 1 1 18vw;
     height: auto;
+    background-color: rgb(250, 245, 245);
 }
 
 .pokemon-num {
@@ -65,37 +88,48 @@
 .card-img {
     display: flex;
     justify-content: center;
-    padding: 1.5em;
+    padding: 1em 1.5em 1em 1.5em;
+    margin-bottom: none;
 }
 
 .card-type {
-    padding: 1em 0em 1em 0em;
+    padding: 0em 0em 0.5em 0em;
 }
 
 .pokemon-type {
     padding-top: 0.2em;
+    margin-bottom: 0.5em;
 }
 
 .card-weakness {
-    padding: 1em 0em 1em 0em;
+    padding: 1.5em 0em 1em 0em;
+    margin-top: 1vh;
 }
 
 .pokemon-weak {
     padding-top: 0.2em;
 }
 
+.poke-weight-height {
+    padding: 0.5em 0em 1em 0em;
+}
+
+.pokemon-info {
+    padding-top: 0.2em;
+}
+
 .opt {
-    margin: 0.5em 1em 0.5em 1.2em;
-    font-size: 1.2em;
+    margin: 0.5em 1em 0.5em 1em;
+    font-size: 1em;
 }
 
 .filters {
     display: block;
     padding: 0.2em;
-    margin: 0.5em 1em 0.5em 2em;
+    margin: 0.5em 1em 0.5em 1.5em;
     width: 60%;
     height: 4vh;
     border: none;
     font-family: 'VT323', monospace;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }

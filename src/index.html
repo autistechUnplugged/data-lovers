@@ -12,69 +12,73 @@
     <div class="flex">
       <header class="top">
         <!-- logo - alterar quando tiver terminado o básico -->
-        <img id="logoImage" class="logo" src="img/pokemon-logo.png" alt="logotipo">
+        <!-- <img id="logoImage" class="logo" src="img/pokemon-logo.png" alt="logotipo"> -->
+        <img src="https://data.whicdn.com/images/92521566/original.gif" class="logo" alt="logotipo">
       </header>
       <div class="wrap">
         <aside class="side">
-          <nav class="navigation">
-              <div class="opt">
-                  <input type="radio" name="order" class="radio-menu" id="idOrder1to151" checked="checked">
-                  <label for="idOrder1to151">ID - [menor para o maior]</label>
-                </div>
-                <div class="opt">
-                  <input type="radio" name="order" class="radio-menu" id="idOrder151to1">
-                  <label for="idOrder151to1">ID - [maior para menor]</label>
-                </div>
-                <div class="opt">
-                  <input type="radio" name="order" class="radio-menu" id="alphOrderAtoZ">
-                  <label for="alphOrderAtoZ">Nomes - [A-Z]</label>
-                </div>
-                <div class="opt">
-                  <input type="radio" name="order" class="radio-menu" id="alphOrderZtoA">
-                  <label for="alphOrderZtoA">Nomes - [Z-A]</label>
-                </div> 
-                <select class="filters">
-                  <option selected>Tipos</option>
-                  <option>Bug</option>
-                  <option>Dragon</option>
-                  <option>Fairy</option>
-                  <option>Fire</option>
-                  <option>Ghost</option>
-                  <option>Ground</option>
-                  <option>Normal</option>
-                  <option>Psychic</option>
-                  <option>Steel</option>
-                  <option>Dark</option>
-                  <option>Eletric</option>
-                  <option>Fighting</option>
-                  <option>Flying</option>
-                  <option>Grass</option>
-                  <option>Ice</option>
-                  <option>Poison</option>
-                  <option>Rock</option>
-                  <option>Water</option>
-                </select>
-                <select class="filters">
-                  <option selected>Fraquezas</option>
-                  <option>Bug</option>
-                  <option>Dragon</option>
-                  <option>Fairy</option>
-                  <option>Fire</option>
-                  <option>Ghost</option>
-                  <option>Ground</option>
-                  <option>Normal</option>
-                  <option>Psychic</option>
-                  <option>Steel</option>
-                  <option>Dark</option>
-                  <option>Eletric</option>
-                  <option>Fighting</option>
-                  <option>Flying</option>
-                  <option>Grass</option>
-                  <option>Ice</option>
-                  <option>Poison</option>
-                  <option>Rock</option>
-                  <option>Water</option>
-              </select>
+          <a href="#" id="sidebar"><img src="https://i.imgur.com/jC8dQD2.png" id="pokedex" class="pokedexImg" alt="closed pokedex"></a>
+          <nav class="navigation" id="navbar">
+            <div class="opt">
+              <!-- <img src="http://pa1.narvii.com/6100/557070ba7d0e52433772768ef6b750420b4dfb69_00.gif" class="logoimage" alt="logotipo image"> -->
+              <input type="radio" name="order" class="radio-menu" id="idOrder1to151" checked="checked">
+              <label for="idOrder1to151">ID - [menor para o maior]</label>
+            </div>
+            <div class="opt">
+              <input type="radio" name="order" class="radio-menu" id="idOrder151to1">
+              <label for="idOrder151to1">ID - [maior para menor]</label>
+            </div>
+            <div class="opt">
+              <input type="radio" name="order" class="radio-menu" id="alphOrderAtoZ">
+              <label for="alphOrderAtoZ">Nomes - [A-Z]</label>
+            </div>
+            <div class="opt">
+              <input type="radio" name="order" class="radio-menu" id="alphOrderZtoA">
+              <label for="alphOrderZtoA">Nomes - [Z-A]</label>
+              <button id="btn">Water</button>
+            </div> 
+            <select class="filters">
+              <option selected>Tipos</option>
+              <option>Bug</option>
+              <option>Dragon</option>
+              <option>Fairy</option>
+              <option>Fire</option>
+              <option>Ghost</option>
+              <option>Ground</option>
+              <option>Normal</option>
+              <option>Psychic</option>
+              <option>Steel</option>
+              <option>Dark</option>
+              <option>Eletric</option>
+              <option>Fighting</option>
+              <option>Flying</option>
+              <option>Grass</option>
+              <option>Ice</option>
+              <option>Poison</option>
+              <option>Rock</option>
+              <option>Water</option>
+            </select>
+            <select class="filters" id="pokeWeakness">
+              <option selected>Fraquezas</option>
+              <option>Bug</option>
+              <option>Dragon</option>
+              <option>Fairy</option>
+              <option>Fire</option>
+              <option>Ghost</option>
+              <option>Ground</option>
+              <option>Normal</option>
+              <option>Psychic</option>
+              <option>Steel</option>
+              <option>Dark</option>
+              <option>Eletric</option>
+              <option>Fighting</option>
+              <option>Flying</option>
+              <option>Grass</option>
+              <option>Ice</option>
+              <option>Poison</option>
+              <option>Rock</option>
+              <option>Water</option>
+            </select>
           </nav>
         </aside>
         <main class="content">
