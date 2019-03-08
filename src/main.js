@@ -1,11 +1,11 @@
 const pokemonData = POKEMON["pokemon"];
 const eachPokemon = document.getElementById("eachPokemon");
-const sidebar = document.getElementById("sidebar");
 const ascOrder = document.getElementById("idOrder1to151");
 const descOrder = document.getElementById("idOrder151to1");
 const checkAtoZ = document.getElementById("alphOrderAtoZ");
 const checkZtoA = document.getElementById("alphOrderZtoA");
-const pokeWeak = document.getElementById("pokeWeakness");
+
+// const sidebar = document.getElementById("sidebar");
 
 window.onload = function () {
     goPokemons();
@@ -19,45 +19,56 @@ function getPokemons() {
 
 function goPokemons() {
     eachPokemon.innerHTML = `
-    ${getPokemons().map((number) => `
-        <div class="pokemon-card">
-            <div class="card-num">
-                <h4 class="pokemon-num">${number["num"]}<h4>
-            </div>
-            <div class="card-title">
-                <h3 class="pokemon-name">${number["name"]}</h3>
-            </div>
+    ${getPokemons().map((poke) => `
+        <div class="pokemon">
             <div class="card-img">
-                <img src="${number["img"]}" class="img-pokemon" />
+                <img src="${poke["img"]}" class="img-pokemon" />
             </div>
-            <div class="card-type">
-                <p class="pokemon-type">${number["type"].join(" ")}</p>
-            </div>
-            <div class="card-weaknesses">
-                <p><b>Fraqueza</b></p>
-                <p class="pokemon-weak">${number["weaknesses"].join(" ")}</p>
-            </div>
-            <div class="poke-weight-height">
-                <p><b>Peso e Altura</b></p>
-                <p class="pokemon-info">${number["weight"]} e ${number["height"]}</p>
+            <div class="pokemon-card">
+                <div class="card-num">
+                    <p class="pokemon-num">#${poke["num"]}<p>
+                </div>
+                <div class="card-title">
+                    <h3 class="pokemon-name">${poke["name"]}</h3>
+                </div>
+                <div class="card-type info">
+                    <p class="pokemon-type">${poke["type"].join(" / ")}</p>
+                    <p class="sub">Tipo</p>
+                </div>
+                <div class="card-pokemon info">
+                    <p class="pokemon-weight">${poke["weight"]}</p>
+                    <p class="sub">Peso</p>
+                </div>
+                <div class="card-pokemon info">
+                    <p class="pokemon-height">${poke["height"]}</p>
+                    <p class="sub">Altura</p>
+                </div>
+                <div class="card-candy">
+                    <p class="pokemon-candy">${poke["candy"]}</p>
+                    <p class="sub">Candy</p>
+                </div>
+                <div class="card-candy-evo">
+                    <p class="pokemon-candy-evo">${poke["candy_count"]}</p>
+                    <p class="sub">Quantidade para evoluir</p>
+                </div>
             </div>
         </div>
-       `).join("")}
-       `
+    `).join("")}
+   `
 };
 
 function makeInvisible() {
     const navbar = document.getElementById("navbar");
     const pokedex = document.getElementById("pokedex");
+    const initial = document.getElementById("initial");
+    const another = document.getElementById("another");
     pokedex.style.display = "none";
+    initial.style.display = "none";
     navbar.style.display = "block";
     eachPokemon.style.display = "block";
+    another.style.display = "block";
 }
 
-function makeVisible() {
-    pokedex.style.display = "block";
-    navbar.style.display = "none";
-}
 
 function orderPokemonUp() {
     pokemonData.sort(function(a,b) {
@@ -66,12 +77,14 @@ function orderPokemonUp() {
     return goPokemons();
 };
 
+
 function orderPokemonDown() {
     pokemonData.sort(function(a,b) {
         return b.num - a.num;
     });
     return goPokemons();
 };
+
 
 function sortingPokemonsUp() {
     pokemonData.sort(function(a,b) {
@@ -88,6 +101,7 @@ function sortingPokemonsUp() {
     return goPokemons();
 }; 
 
+
 function sortingPokemonsDown() {
     pokemonData.sort(function(a,b) {
         let nameA = a.name.toUpperCase();
@@ -103,34 +117,6 @@ function sortingPokemonsDown() {
     return goPokemons();
 }; 
 
-for (i = 0; i < pokemonData.length; i++) {
-    weak = pokemonData[i]["weaknesses"];
-    console.log(weak);
-}
-
-function filterWeakPokes() {
-    for (i = 0; i < pokemonData.length; i++) {
-        let weak = pokemonData[i]["weaknesses"];
-        if (weak === pokeWeak.value) {
-            return weak;
-        }
-    }
-}
-
-let filterWeaknesses = pokemonData.filter(weak => {
-    for (i = 0; i < pokemonData.length; i++) {
-        weak = pokemonData[i]["weaknesses"];
-        if (weak === pokeWeak.value) {
-            return weak;
-        }
-    }
-});
-
-const btn = document.getElementById("btn");
-
-btn.addEventListener("click", filterWeaknesses);
-
-// pokeWeak.addEventListener("change", filterWeaknesses);
 
 sidebar.addEventListener("click", makeInvisible);
 checkAtoZ.addEventListener("click", sortingPokemonsUp);
@@ -139,10 +125,23 @@ ascOrder.addEventListener('click', orderPokemonUp);
 descOrder.addEventListener('click', orderPokemonDown);
 
 
-// função de filtro para fraquezas
+// frequencia de tipo
+const typeStats = pokemonData.reduce((info, poke) => {
+    info[poke.type] = info[poke.type] + 1 || 1;
+    return info;
+}, {});
+// console.log(typeStats);
 
-// função pros cards de cada pokemon
 
-// as funções posteriores
+// frequencia de fraquezas
+const weaknessesStats = pokemonData.reduce((info, poke) => {
+    info[poke.weaknesses] = info[poke.weaknesses] + 1 || 1;
+    return info;
+}, {});
+// console.log(weaknessesStats);
 
-// os graficos
+weak = [];
+// tentar trocar por outro for loop
+for (let i = 0; i < pokemonData.length; i++) {
+    weak.push(pokemonData[i]["weaknesses"]);
+}

@@ -17,79 +17,47 @@
       </header>
       <div class="wrap">
         <aside class="side">
-          <a href="#" id="sidebar"><img src="https://i.imgur.com/jC8dQD2.png" id="pokedex" class="pokedexImg" alt="closed pokedex"></a>
+          <a href="#" id="sidebar"><img src="https://i.imgur.com/jC8dQD2.png" id="pokedex" class="pokedex-img" alt="closed pokedex"></a>
           <nav class="navigation" id="navbar">
             <div class="opt">
-              <!-- <img src="http://pa1.narvii.com/6100/557070ba7d0e52433772768ef6b750420b4dfb69_00.gif" class="logoimage" alt="logotipo image"> -->
-              <input type="radio" name="order" class="radio-menu" id="idOrder1to151" checked="checked">
-              <label for="idOrder1to151">ID - [menor para o maior]</label>
+              <!-- tentar ícones pra esse menu kkk -->
+              <button id="idOrder1to151">ID - [menor para o maior]</button>
             </div>
             <div class="opt">
-              <input type="radio" name="order" class="radio-menu" id="idOrder151to1">
-              <label for="idOrder151to1">ID - [maior para menor]</label>
+              <button id="idOrder151to1">ID - [maior para menor]</button>
             </div>
             <div class="opt">
-              <input type="radio" name="order" class="radio-menu" id="alphOrderAtoZ">
-              <label for="alphOrderAtoZ">Nomes - [A-Z]</label>
+              <button id="alphOrderAtoZ">Nomes - [A-Z]</button>
             </div>
             <div class="opt">
-              <input type="radio" name="order" class="radio-menu" id="alphOrderZtoA">
-              <label for="alphOrderZtoA">Nomes - [Z-A]</label>
-              <button id="btn">Water</button>
+              <button id="alphOrderZtoA">Nomes - [Z-A]</button>
             </div> 
-            <select class="filters">
-              <option selected>Tipos</option>
-              <option>Bug</option>
-              <option>Dragon</option>
-              <option>Fairy</option>
-              <option>Fire</option>
-              <option>Ghost</option>
-              <option>Ground</option>
-              <option>Normal</option>
-              <option>Psychic</option>
-              <option>Steel</option>
-              <option>Dark</option>
-              <option>Eletric</option>
-              <option>Fighting</option>
-              <option>Flying</option>
-              <option>Grass</option>
-              <option>Ice</option>
-              <option>Poison</option>
-              <option>Rock</option>
-              <option>Water</option>
-            </select>
-            <select class="filters" id="pokeWeakness">
-              <option selected>Fraquezas</option>
-              <option>Bug</option>
-              <option>Dragon</option>
-              <option>Fairy</option>
-              <option>Fire</option>
-              <option>Ghost</option>
-              <option>Ground</option>
-              <option>Normal</option>
-              <option>Psychic</option>
-              <option>Steel</option>
-              <option>Dark</option>
-              <option>Eletric</option>
-              <option>Fighting</option>
-              <option>Flying</option>
-              <option>Grass</option>
-              <option>Ice</option>
-              <option>Poison</option>
-              <option>Rock</option>
-              <option>Water</option>
-            </select>
+            <button class="filters" id="pokeType">Tipos</button>
+            <button class="filters" id="pokeWeakness" value="Water">Fraquezas</button>
+            <div class="search" id="searchName">
+              <input placeholder="Insira o nome" class="search-box"></input>
+            </div>
           </nav>
         </aside>
         <main class="content">
-          <section class="pokemonList">
+          <section class="pokemon-list">
             <div id="eachPokemon"></div>
           </section>
         </main>
+        <section id="initial" class="init">
+            <!-- com a imagem do começo junto com a pokedex fechada -->
+            <img src="https://i.imgur.com/Goh6Eib.gif">
+            <h3>Clique na pokedex para começar!</h3>
+        </section>
+        <section id="another" class="other">
+          <!-- list de botoes com curiosidade, spawn sei la idk?? -->
+          <a href="./src/wiki.html"><button>Curiosidades e +</button></a>
+        </section>
       </div>
     </div>
     <script src="./data/pokemon/pokemon.js"></script>
     <!--  <script src="data.js"></script> -->
     <script src="main.js"></script>
+    <script src="curiosities.js"></script>
   </body>
 </html>
