@@ -1,54 +1,103 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!-- melhorar isso aqui -->
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>< Pokédex ></title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Linkar fontes do google -->
+    <link href="https://fonts.googleapis.com/css?family=VT323|ZCOOL+QingKe+HuangYou" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <img id="logoImage" src="img/pokemon-logo.png" alt="Logo ">
-    </header>
-    <aside class="menuLateral">
-      <nav>
-        <p>Ordernar</p>
-        <div class="">
-          <input type="radio" name="order" class="radio-menu" id="idOrder1to151" checked="checked">
-          <label for="idOrder-1to151">Id - menor para maior</label>
-        </div>
-        <div>
-          <input type="radio" name="order" class="radio-menu" id="idOrder151to1">
-          <label for="idOrder-151to1">Id - maior para menor</label>
-        </div>
-        <div>
-          <input type="radio" name="order" class="radio-menu" id="alphOrderAtoZ">
-          <button id="one">a to z</button>
-          <label for="alphOrder-AtoZ">Alfabética - A-Z</label>
-        </div>
-        <div>
-          <input type="radio" name="order" class="radio-menu" id="alphOrder-ZtoA">
-          <button id="two" onClick="sortingPokemonsUp()">z to a</button>
-          <label for="alphOrder-ZtoA">Alfabética - Z-A</label>
-        </div>        
-
-        <p>Filtrar</p>
-        <input type="checkbox" class="check-menu" id="pokemonType">
-        <label for="pokemonType">Tipo de Pokémon</label>
-        <input type="checkbox" class="check-menu" id="pokemonWeakness">
-        <label for="pokemonWeakness">Fraquezas</label>
-
-        <p>Curiosidades</p>
-      </nav>
-    </aside>
-
-    <main>
-      <section id="pokemonList">
-        <div id="eachPokemon"></div>
-      </section>
-    </main>
-
-    <script src="./data/pokemon/pokemon.js"></script>
-   <!--  <script src="data.js"></script> -->
+    <div class="flex">
+      <header class="top">
+        <!-- logo - alterar quando tiver terminado o básico -->
+        <!-- <img id="logoImage" class="logo" src="img/pokemon-logo.png" alt="logotipo"> -->
+        <img src="https://data.whicdn.com/images/92521566/original.gif" class="logo" alt="logotipo">
+      </header>
+      <div class="wrap">
+        <aside class="side">
+          <a href="#" id="sidebar"><img src="https://i.imgur.com/jC8dQD2.png" id="pokedex" class="pokedex-img" alt="closed pokedex"></a>
+          <nav class="navigation" id="navbar">
+            <div class="opt">
+              <!-- tentar ícones pra esse menu kkk -->
+              <button id="idOrder1to151" class="btn">ID - [menor para o maior]</button>
+            </div>
+            <div class="opt">
+              <button id="idOrder151to1" class="btn">ID - [maior para menor]</button>
+            </div>
+            <div class="opt">
+              <button id="alphOrderAtoZ" class="btn">Nomes - [A-Z]</button>
+            </div>
+            <div class="opt">
+              <button id="alphOrderZtoA" class="btn">Nomes - [Z-A]</button>
+            </div> 
+            <select class="filters" id="pokeType">
+                <option selected>Tipos</option>
+                <option>Bug</option>
+                <option>Dragon</option>
+                <option>Fairy</option>
+                <option>Fire</option>
+                <option>Ghost</option>
+                <option>Ground</option>
+                <option>Normal</option>
+                <option>Psychic</option>
+                <option>Steel</option>
+                <option>Dark</option>
+                <option>Eletric</option>
+                <option>Fighting</option>
+                <option>Flying</option>
+                <option>Grass</option>
+                <option>Ice</option>
+                <option>Poison</option>
+                <option>Rock</option>
+                <option>Water</option>
+              </select>
+              <select class="filters" id="pokeWeakness">
+                <option selected>Fraquezas</option>
+                <option>Bug</option>
+                <option>Dragon</option>
+                <option>Fairy</option>
+                <option>Fire</option>
+                <option>Ghost</option>
+                <option>Ground</option>
+                <option>Normal</option>
+                <option>Psychic</option>
+                <option>Steel</option>
+                <option>Dark</option>
+                <option>Eletric</option>
+                <option>Fighting</option>
+                <option>Flying</option>
+                <option>Grass</option>
+                <option>Ice</option>
+                <option>Poison</option>
+                <option>Rock</option>
+                <option>Water</option>
+              </select>
+            <div class="search" id="searchName">
+              <input placeholder="Insira o nome" class="search-box"></input>
+            </div>
+          </nav>
+        </aside>
+        <main class="content">
+          <section class="pokemon-list">
+            <div id="eachPokemon"></div>
+          </section>
+        </main>
+        <section id="initial" class="init">
+            <!-- com a imagem do começo junto com a pokedex fechada -->
+            <img src="https://i.imgur.com/Goh6Eib.gif">
+            <h3>Clique na pokedex para começar!</h3>
+        </section>
+        <section id="another" class="other">
+          <!-- list de botoes com curiosidade, spawn sei la idk?? -->
+          <a href="wiki.html"><button class="other-btn">Curiosidades e +</button></a>
+        </section>
+      </div>
+    </div>
+    <script src="pokemon.js"></script>
+    <!--  <script src="data.js"></script> -->
     <script src="main.js"></script>
+    <!--  <script src="curiosities.js"></script> -->
   </body>
 </html>
