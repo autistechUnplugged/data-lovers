@@ -64,7 +64,7 @@ function makeInvisible() {
     const another = document.getElementById("another");
     pokedex.style.display = "none";
     initial.style.display = "none";
-    navbar.style.display = "block";
+    navbar.style.display = "flex";
     eachPokemon.style.display = "block";
     another.style.display = "block";
 }
