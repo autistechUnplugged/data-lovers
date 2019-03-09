@@ -67,7 +67,7 @@ function makeInvisible() {
     navbar.style.display = "flex";
     eachPokemon.style.display = "block";
     another.style.display = "block";
-}
+};
 
 
 function orderPokemonUp() {
@@ -123,25 +123,3 @@ checkAtoZ.addEventListener("click", sortingPokemonsUp);
 checkZtoA.addEventListener("click", sortingPokemonsDown);
 ascOrder.addEventListener('click', orderPokemonUp);
 descOrder.addEventListener('click', orderPokemonDown);
-
-
-// frequencia de tipo
-const typeStats = pokemonData.reduce((info, poke) => {
-    info[poke.type] = info[poke.type] + 1 || 1;
-    return info;
-}, {});
-// console.log(typeStats);
-
-
-// frequencia de fraquezas
-const weaknessesStats = pokemonData.reduce((info, poke) => {
-    info[poke.weaknesses] = info[poke.weaknesses] + 1 || 1;
-    return info;
-}, {});
-// console.log(weaknessesStats);
-
-weak = [];
-// tentar trocar por outro for loop
-for (let i = 0; i < pokemonData.length; i++) {
-    weak.push(pokemonData[i]["weaknesses"]);
-}
