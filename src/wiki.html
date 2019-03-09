@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- melhorar isso aqui -->
+    <meta charset="utf-8">
+    <title>< Pokédex ></title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Linkar fontes do google -->
+    <link href="https://fonts.googleapis.com/css?family=VT323|ZCOOL+QingKe+HuangYou" rel="stylesheet">
+  </head>
+  <body>
+    <div class="flex">
+      <header class="top">
+        <img src="https://data.whicdn.com/images/92521566/original.gif" class="logo" alt="logotipo">
+      </header>
+      <div class="wrap">
+        <aside class="side">
+          <nav class="menu" id="navbar">
+            <div class="opt">
+              <button id="wikio" class="btn">Curiosidades</button>
+            </div>
+            <div class="opt">
+              <button id="eggsy" class="btn">Lista de Eggs</button>
+            </div>
+            <div class="opt">
+              <button id="spawnTime" class="btn">Spawn</button> <!-- ícone de relógio? -->
+            </div>
+            <div>
+                <a href="index.html" class="bck"><button class="backBtn">Voltar</button></a>
+              </div>
+          </nav>
+        </aside>
+        <main class="content">
+          <section class="calc">
+            <!-- talvez uma section só para mostrar tudo? com uma altura maior? -->
+            <div id="showContent"></div>
+          </section>
+        </main>
+      </div>
+    </div>
+    <script src="./data/pokemon/pokemon.js"></script>
+    <!--  <script src="data.js"></script> -->
+    <!-- <script src="main.js"></script> -->
+    <!-- colocar tudo no mesmo js? -->
+    <script src="info.js"></script>
+  </body>
+</html>
