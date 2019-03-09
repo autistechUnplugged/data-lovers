@@ -6,6 +6,24 @@ function getPokemons() {
 };
 
 
+// function goPokemons() {
+//     eachPokemon.innerHTML = `
+//     ${getPokemons().map((poke) => `
+//         <div class="pokemon">
+//             <div class="card-img">
+//                 <img src="${poke["img"]}" class="img-pokemon" />
+//             </div>
+//             <div class="pokemon-card">
+//                 <div class="card-num">
+//                     <p class="pokemon-num">#${poke["num"]}<p>
+//                 </div>
+//         </div>
+//     `).join("")}
+//    `
+// };
+
+
+
 // fraquezas
 const weak = [];
 
@@ -79,10 +97,6 @@ const minWeight = weight.reduce(function(a, b) {
     return Math.min(a, b);
 });
 
-// fazer no menu: botao de curiosidades, botao de informações, botao de stats?, botao de voltar
-// aí a partir das informações, essas coisas listadas abaixo
-// a partir das curiosidades, todas as médias e min/max e os gráficos
-// o voltar volta pra inicial
 
 // media spawn - ja o average ou fazer a media da chance?
 
@@ -103,26 +117,3 @@ for (data of pokemonData) {
 
 // separar os pokemons por spawn time - horario que eles chocam/aparecem? (usar sort?)
 // colocar em colunas o horario de spawn e embaixo os pokemons correspondentes de cada horario (nao precisa explicar)
-
-
-
-// entender esses multipliers ae pra saber o que fazer com eles
-
-
-
-// function goPokemons() {
-//     eachPokemon.innerHTML = `
-//     ${getPokemons().map((poke) => `
-//         <div class="pokemon">
-//             <div class="card-img">
-//                 <img src="${poke["img"]}" class="img-pokemon" />
-//             </div>
-//             <div class="pokemon-card">
-//                 <div class="card-num">
-//                     <p class="pokemon-num">#${poke["num"]}<p>
-//                 </div>
-                
-//         </div>
-//     `).join("")}
-//    `
-// };

@@ -147,6 +147,7 @@ body {
 .content {
     position: absolute;
     margin: 10vh 0vw 0vh 28vw;
+    width: 70vw;
     overflow-y: auto;
     height: 42vh;
     font-family: 'ZCOOL QingKe HuangYou', cursive;
@@ -206,20 +207,42 @@ body {
     color: rgba(37, 36, 36, 0.75);
 }
 
+.card-weaknesses {
+    display: flex;
+    flex-direction: column;
+}
+
+.pokemon-weaknesses {
+    font-size: 0.9em;
+    margin-top: 1.5vh;
+}
+
+.sub-weak {
+    font-size: 0.8em;
+    color: rgba(37, 36, 36, 0.75);
+    margin-top: 0.1vh;
+    margin-left: 0.8vw;
+}
+
 .pokemon-type {
+    font-size: 1.1em;
 }
 
 .pokemon-weight {
-    
+    font-size: 1.1em;
 }
 
 .pokemon-height {
-    
+    font-size: 1.1em;
 }
 
 .info {
     display: inline-block;
-    margin-left: 1vw;
+}
+
+.hold {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .card-candy {
