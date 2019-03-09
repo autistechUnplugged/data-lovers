@@ -48,6 +48,10 @@ body {
     flex-direction: column;
 }
 
+.menu {
+    margin-top: 24vh;
+}
+
 .pokedex-img {
     width: 20vw;
     height: 60vh;
@@ -76,6 +80,23 @@ body {
     background-color: aqua;
     font-size: 1.2em;
     font-family: 'VT323', monospace;
+}
+
+.backBtn {
+    display: flex;
+    justify-content: center;
+    padding: 0.3em;
+    margin: 6em 0em 0em 1.5em;
+    border: none;
+    width: 15vw;
+    height: auto;
+    background-color: aqua;
+    font-size: 1.2em;
+    font-family: 'VT323', monospace;
+}
+
+.bck {
+    text-decoration: none;
 }
 
 .opt {
@@ -183,9 +204,6 @@ body {
     text-align: center;
     font-size: 0.8em;
     color: rgba(37, 36, 36, 0.75);
-}
-
-.card-type {
 }
 
 .pokemon-type {

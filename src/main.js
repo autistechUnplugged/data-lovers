@@ -31,15 +31,15 @@ function goPokemons() {
                 <div class="card-title">
                     <h3 class="pokemon-name">${poke["name"]}</h3>
                 </div>
-                <div class="card-type info">
+                <div class="info">
                     <p class="pokemon-type">${poke["type"].join(" / ")}</p>
                     <p class="sub">Tipo</p>
                 </div>
-                <div class="card-pokemon info">
+                <div class="info">
                     <p class="pokemon-weight">${poke["weight"]}</p>
                     <p class="sub">Peso</p>
                 </div>
-                <div class="card-pokemon info">
+                <div class="info">
                     <p class="pokemon-height">${poke["height"]}</p>
                     <p class="sub">Altura</p>
                 </div>
