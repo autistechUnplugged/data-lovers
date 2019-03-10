@@ -148,6 +148,7 @@ body {
     position: absolute;
     margin: 10vh 0vw 0vh 28vw;
     overflow-y: auto;
+    width: 70vw;
     height: 42vh;
     font-family: 'ZCOOL QingKe HuangYou', cursive;
     color: rgba(19, 18, 18, 0.92);
@@ -156,6 +157,7 @@ body {
 }
 
 .pokemon-list {
+
 }
 
 #eachPokemon {
@@ -193,6 +195,11 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: -5.3vh;
+}
+
+.hold {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .top {
