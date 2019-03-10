@@ -171,6 +171,7 @@ body {
     margin: 0em 2em 5em 0em;
     padding: 1em;
     width: 18vw;
+    width: 70vw;
     height: auto;
     background-color: rgb(250, 245, 245);
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -194,6 +195,11 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: -5.3vh;
+}
+
+.hold {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .top {
