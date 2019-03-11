@@ -18,15 +18,9 @@ function getPokemons() {
 
 // tentar deixar isso aqui mais dinamico
 
-<<<<<<< HEAD
-function goPokemons() {
-    eachPokemon.innerHTML = `
-    ${getPokemons().map((poke) => `
-=======
 function goPokemons(pokemonDataSource) {
     eachPokemon.innerHTML = `
     ${pokemonDataSource.map(poke => `
->>>>>>> a2fbde534f8fa91c22c4d86bb744cd50e2e937ec
         <div class="pokemon">
             <div class="card-img">
                 <img src="${poke["img"]}" class="img-pokemon" />
@@ -38,19 +32,6 @@ function goPokemons(pokemonDataSource) {
                 <div class="card-title">
                     <h3 class="pokemon-name">${poke["name"]}</h3>
                 </div>
-<<<<<<< HEAD
-                <div class="card-type info">
-                    <p class="pokemon-type">${poke["type"].join(" / ")}</p>
-                    <p class="sub">Tipo</p>
-                </div>
-                <div class="card-pokemon info">
-                    <p class="pokemon-weight">${poke["weight"]}</p>
-                    <p class="sub">Peso</p>
-                </div>
-                <div class="card-pokemon info">
-                    <p class="pokemon-height">${poke["height"]}</p>
-                    <p class="sub">Altura</p>
-=======
                 <div class="hold">
                     <div class="card-type info">
                         <p class="pokemon-type">${poke["type"].join(" / ")}</p>
@@ -68,7 +49,6 @@ function goPokemons(pokemonDataSource) {
                 <div class="card-weaknesses">
                     <p class="pokemon-weaknesses">${poke["weaknesses"].join(" / ")}</p>
                     <p class="sub">Fraqueza</p>
->>>>>>> a2fbde534f8fa91c22c4d86bb744cd50e2e937ec
                 </div>
                 <div class="card-candy">
                     <p class="pokemon-candy">${poke["candy"]}</p>
@@ -87,93 +67,6 @@ function goPokemons(pokemonDataSource) {
 // função filtro
 
 pokeType.addEventListener('change', typeList);
-<<<<<<< HEAD
-
-function typeList() {
-  let typeValue = pokeType.options[pokeType.selectedIndex].value;
-  let pokemonTypeList = pokemonData.filter(monster => (monster.type === typeValue));
-  let pokemonCard = document.getElementById("eachPokemon");
-  eachPokemon.innerHTML = "";
-  eachPokemon.innerHTML = `
-  ${getPokemons().map((poke) => `
-  <div class="pokemon">
-      <div class="card-img">
-          <img src="${poke["img"]}" class="img-pokemon" />
-      </div>
-      <div class="pokemon-card">
-          <div class="card-num">
-              <p class="pokemon-num">#${poke["num"]}<p>
-          </div>
-          <div class="card-title">
-              <h3 class="pokemon-name">${poke["name"]}</h3>
-          </div>
-          <div class="card-type info">
-              <p class="pokemon-type">${poke["type"].join(" / ")}</p>
-              <p class="sub">Tipo</p>
-          </div>
-          <div class="card-pokemon info">
-              <p class="pokemon-weight">${poke["weight"]}</p>
-              <p class="sub">Peso</p>
-          </div>
-          <div class="card-pokemon info">
-              <p class="pokemon-height">${poke["height"]}</p>
-              <p class="sub">Altura</p>
-          </div>
-          <div class="card-candy">
-              <p class="pokemon-candy">${poke["candy"]}</p>
-              <p class="sub">Candy</p>
-          </div>
-          <div class="card-candy-evo">
-              <p class="pokemon-candy-evo">${poke["candy_count"]}</p>
-              <p class="sub">Quantidade para evoluir</p>
-          </div>
-      </div>
-  </div>
-`).join("")}
-`
-};
-
-
-
-
-
-
-function makeInvisible() {
-    const navbar = document.getElementById("navbar");
-    const pokedex = document.getElementById("pokedex");
-    const initial = document.getElementById("initial");
-    const another = document.getElementById("another");
-    pokedex.style.display = "none";
-    initial.style.display = "none";
-    navbar.style.display = "flex";
-    eachPokemon.style.display = "block";
-    another.style.display = "block";
-}
-
-
-function orderPokemonUp() {
-    pokemonData.sort(function(a,b) {
-        return a.num - b.num;
-    });
-    return goPokemons();
-};
-
-
-function orderPokemonDown() {
-    pokemonData.sort(function(a,b) {
-        return b.num - a.num;
-    });
-    return goPokemons();
-};
-
-
-function sortingPokemonsUp() {
-    pokemonData.sort(function(a,b) {
-        let nameA = a.name.toUpperCase();
-        let nameB = b.name.toUpperCase();
-        if (nameA < nameB) {
-            return -1;
-=======
 
 function typeList() {
     let typeValue = pokeType.options[pokeType.selectedIndex].value;
@@ -183,7 +76,6 @@ function typeList() {
         if (typeValue == '') {
             console.log("Returning weaknessList from Type");
             return weaknessList();
->>>>>>> a2fbde534f8fa91c22c4d86bb744cd50e2e937ec
         }
         
         let pokeType = pokemonData.filter(monster => monster.type.includes(typeValue));
@@ -193,59 +85,6 @@ function typeList() {
             console.log("Vazio");
             return eachPokemon.innerHTML = "<h1>Sem Pokémom</h1>";
         }
-<<<<<<< HEAD
-        return 0;
-    });
-    return goPokemons();
-}; 
-
-
-function sortingPokemonsDown() {
-    pokemonData.sort(function(a,b) {
-        let nameA = a.name.toUpperCase();
-        let nameB = b.name.toUpperCase();
-        if (nameA < nameB) {
-            return 1;
-        }
-        if (nameA > nameB) {
-        return -1;
-        }
-        return 0;
-    });
-    return goPokemons();
-}; 
-
-
-sidebar.addEventListener("click", makeInvisible);
-checkAtoZ.addEventListener("click", sortingPokemonsUp);
-checkZtoA.addEventListener("click", sortingPokemonsDown);
-ascOrder.addEventListener('click', orderPokemonUp);
-descOrder.addEventListener('click', orderPokemonDown);
-
-
-// frequencia de tipo
-const typeStats = pokemonData.reduce((info, poke) => {
-    info[poke.type] = info[poke.type] + 1 || 1;
-    return info;
-}, {});
-// console.log(typeStats);
-
-
-// frequencia de fraquezas
-const weaknessesStats = pokemonData.reduce((info, poke) => {
-    info[poke.weaknesses] = info[poke.weaknesses] + 1 || 1;
-    return info;
-}, {});
-// console.log(weaknessesStats);
-
-weak = [];
-// tentar trocar por outro for loop
-for (let i = 0; i < pokemonData.length; i++) {
-    weak.push(pokemonData[i]["weaknesses"]);
-}
-
-
-=======
         console.log("Returning FILTERED Weakness And Type from Type");
         return goPokemons(pokeWeaknessAndType);
     } else {
@@ -371,4 +210,3 @@ checkAtoZ.addEventListener("click", sortingPokemonsUp);
 checkZtoA.addEventListener("click", sortingPokemonsDown);
 ascOrder.addEventListener('click', orderPokemonUp);
 descOrder.addEventListener('click', orderPokemonDown);
->>>>>>> a2fbde534f8fa91c22c4d86bb744cd50e2e937ec
