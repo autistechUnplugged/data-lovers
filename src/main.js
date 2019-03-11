@@ -59,23 +59,51 @@ function goPokemons() {
 
 // função filtro
 
-pokeType.addEventListener('click', typeList);
+pokeType.addEventListener('change', typeList);
 
 function typeList() {
-  let pokemonTypeList = pokemonData.filter("type");
+  let typeValue = pokeType.options[pokeType.selectedIndex].value;
+  let pokemonTypeList = pokemonData.filter(monster => (monster.type === typeValue));
   let pokemonCard = document.getElementById("eachPokemon");
   eachPokemon.innerHTML = "";
   eachPokemon.innerHTML = `
-  ${pokemonTypeList.map((monster) => `
-     <div class="pokemon">
-       <img src="${monster["img"]}" class="pokemon-img"/>
-       <div class="text-name">
-         <h3 class="pokemon-name">${monster["name"]}</h3>
-       </div>
-     </div>
-   `).join("")}
-    `
-}
+  ${getPokemons().map((poke) => `
+  <div class="pokemon">
+      <div class="card-img">
+          <img src="${poke["img"]}" class="img-pokemon" />
+      </div>
+      <div class="pokemon-card">
+          <div class="card-num">
+              <p class="pokemon-num">#${poke["num"]}<p>
+          </div>
+          <div class="card-title">
+              <h3 class="pokemon-name">${poke["name"]}</h3>
+          </div>
+          <div class="card-type info">
+              <p class="pokemon-type">${poke["type"].join(" / ")}</p>
+              <p class="sub">Tipo</p>
+          </div>
+          <div class="card-pokemon info">
+              <p class="pokemon-weight">${poke["weight"]}</p>
+              <p class="sub">Peso</p>
+          </div>
+          <div class="card-pokemon info">
+              <p class="pokemon-height">${poke["height"]}</p>
+              <p class="sub">Altura</p>
+          </div>
+          <div class="card-candy">
+              <p class="pokemon-candy">${poke["candy"]}</p>
+              <p class="sub">Candy</p>
+          </div>
+          <div class="card-candy-evo">
+              <p class="pokemon-candy-evo">${poke["candy_count"]}</p>
+              <p class="sub">Quantidade para evoluir</p>
+          </div>
+      </div>
+  </div>
+`).join("")}
+`
+};
 
 
 
