@@ -1,4 +1,4 @@
-const pokemonData = POKEMON["pokemon"];
+
 const canvas = document.getElementById("showContent");
 
 function getPokemons() {

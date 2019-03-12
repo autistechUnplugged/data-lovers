@@ -1,100 +1,105 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- melhorar isso aqui -->
-    <meta charset="utf-8">
-    <title>< Pokédex ></title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=VT323|ZCOOL+QingKe+HuangYou" rel="stylesheet">
-  </head>
-  <body>
-    <div class="flex">
-      <header class="top">
-        <img src="https://data.whicdn.com/images/92521566/original.gif" class="logo" alt="logotipo">
-      </header>
-      <div class="wrap">
-        <aside class="side">
-          <a href="#" id="sidebar"><img src="https://i.imgur.com/jC8dQD2.png" id="pokedex" class="pokedex-img" alt="closed pokedex"></a>
-          <nav class="navigation" id="navbar">
-            <div class="opt">
-              <!-- tentar ícones pra esse menu -->
-              <button id="idOrder1to151" class="btn">ID - [menor para o maior]</button>
-            </div>
-            <div class="opt">
-              <button id="idOrder151to1" class="btn">ID - [maior para menor]</button>
-            </div>
-            <div class="opt">
-              <button id="alphOrderAtoZ" class="btn">Nomes - [A-Z]</button>
-            </div>
-            <div class="opt">
-              <button id="alphOrderZtoA" class="btn">Nomes - [Z-A]</button>
-            </div> 
-            <select class="filters" id="pokeType">
-                <option value="" defaultSelected >Tipos</option>
-                <option value="Bug">Bug</option>
-                <option value="Dragon">Dragon</option>
-                <option value="Fairy">Fairy</option>
-                <option value="Fire">Fire</option>
-                <option value="Ghost">Ghost</option>
-                <option value="Ground">Ground</option>
-                <option value="Normal">Normal</option>
-                <option value="Psychic">Psychic</option>
-                <option value="Steel">Steel</option>
-                <option value="Dark">Dark</option>
-                <option value="Electric">Electric</option>
-                <option value="Fighting">Fighting</option>
-                <option value="Flying">Flying</option>
-                <option value="Grass">Grass</option>
-                <option value="Ice">Ice</option>
-                <option value="Rock">Rock</option>
-                <option value="Poison">Poison</option>
-                <option value="Water">Water</option>
-              </select>
-              <select class="filters" id="pokeWeakness">
-                  <option value="" defaultSelected >Fraquezas</option>
-                  <option value="Bug">Bug</option>
-                  <option value="Dragon">Dragon</option>
-                  <option value="Fairy">Fairy</option>
-                  <option value="Fire">Fire</option>
-                  <option value="Ghost">Ghost</option>
-                  <option value="Ground">Ground</option>
-                  <option value="Normal">Normal</option>
-                  <option value="Psychic">Psychic</option>
-                  <option value="Steel">Steel</option>
-                  <option value="Dark">Dark</option>
-                  <option value="Electric">Electric</option>
-                  <option value="Fighting">Fighting</option>
-                  <option value="Flying">Flying</option>
-                  <option value="Grass">Grass</option>
-                  <option value="Ice">Ice</option>
-                  <option value="Rock">Rock</option>
-                  <option value="Poison">Poison</option>
-                  <option value="Water">Water</option>
-              </select>
-            <div class="search" id="searchName">
-              <input placeholder="Insira o nome" class="search-box"></input>
-            </div>
-            <section id="another" class="other">
-              <a href="wiki.html"><button class="other-btn">Curiosidades e +</button></a>
-            </section>
-          </nav>
-        </aside>
-        <main class="content">
-          <section class="pokemon-list">
-            <div id="eachPokemon"></div>
+
+<head>
+  <!-- melhorar isso aqui -->
+  <meta charset="utf-8">
+  <title>
+    < Pokédex>
+  </title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=VT323|ZCOOL+QingKe+HuangYou" rel="stylesheet">
+</head>
+
+<body>
+  <div class="flex">
+    <header class="top">
+      <img src="https://data.whicdn.com/images/92521566/original.gif" class="logo" alt="logotipo">
+    </header>
+    <div class="wrap">
+      <aside class="side">
+        <a href="#" id="sidebar"><img src="https://i.imgur.com/jC8dQD2.png" id="pokedex" class="pokedex-img"
+            alt="closed pokedex"></a>
+        <nav class="navigation" id="navbar">
+          <div class="opt">
+            <!-- tentar ícones pra esse menu -->
+            <button id="idOrder1to151" class="btn">ID - [menor para o maior]</button>
+          </div>
+          <div class="opt">
+            <button id="idOrder151to1" class="btn">ID - [maior para menor]</button>
+          </div>
+          <div class="opt">
+            <button id="alphOrderAtoZ" class="btn">Nomes - [A-Z]</button>
+          </div>
+          <div class="opt">
+            <button id="alphOrderZtoA" class="btn">Nomes - [Z-A]</button>
+          </div>
+          <select class="filters" id="pokeType">
+            <option value="" defaultSelected>Tipos</option>
+            <option value="Bug">Bug</option>
+            <option value="Dragon">Dragon</option>
+            <option value="Fairy">Fairy</option>
+            <option value="Fire">Fire</option>
+            <option value="Ghost">Ghost</option>
+            <option value="Ground">Ground</option>
+            <option value="Normal">Normal</option>
+            <option value="Psychic">Psychic</option>
+            <option value="Steel">Steel</option>
+            <option value="Dark">Dark</option>
+            <option value="Electric">Electric</option>
+            <option value="Fighting">Fighting</option>
+            <option value="Flying">Flying</option>
+            <option value="Grass">Grass</option>
+            <option value="Ice">Ice</option>
+            <option value="Rock">Rock</option>
+            <option value="Poison">Poison</option>
+            <option value="Water">Water</option>
+          </select>
+          <select class="filters" id="pokeWeakness">
+            <option value="" defaultSelected>Fraquezas</option>
+            <option value="Bug">Bug</option>
+            <option value="Dragon">Dragon</option>
+            <option value="Fairy">Fairy</option>
+            <option value="Fire">Fire</option>
+            <option value="Ghost">Ghost</option>
+            <option value="Ground">Ground</option>
+            <option value="Normal">Normal</option>
+            <option value="Psychic">Psychic</option>
+            <option value="Steel">Steel</option>
+            <option value="Dark">Dark</option>
+            <option value="Electric">Electric</option>
+            <option value="Fighting">Fighting</option>
+            <option value="Flying">Flying</option>
+            <option value="Grass">Grass</option>
+            <option value="Ice">Ice</option>
+            <option value="Rock">Rock</option>
+            <option value="Poison">Poison</option>
+            <option value="Water">Water</option>
+          </select>
+          <div class="search" id="searchName">
+            <input type="text" placeholder="Insira o nome" id="searchInput" class="search-box"></input>
+          </div>
+          <section id="another" class="other">
+            <a href="wiki.html"><button class="other-btn">Curiosidades e +</button></a>
           </section>
-        </main>
-        <section id="initial" class="init">
-            <!-- trocar essa parte -->
-            <img src="https://i.imgur.com/Goh6Eib.gif">
-            <h3>Clique na pokedex para começar!</h3>
+        </nav>
+      </aside>
+      <main class="content">
+        <section class="pokemon-list">
+          <div id="eachPokemon"></div>
         </section>
-      
-      </div>
+      </main>
+      <section id="initial" class="init">
+        <!-- trocar essa parte -->
+        <img src="https://i.imgur.com/Goh6Eib.gif">
+        <h3>Clique na pokedex para começar!</h3>
+      </section>
     </div>
-    <script src="./data/pokemon/pokemon.js"></script>
-    <!--  <script src="data.js"></script> -->
-    <script src="main.js"></script>
-    <script src="info.js"></script>
-  </body>
+  </div>
+  <script src="./data/pokemon/pokemon.js"></script>
+  <!--  <script src="data.js"></script> -->
+  <script src="main.js"></script>
+  <script src="info.js"></script>
+</body>
+
 </html>
