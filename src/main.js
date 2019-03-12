@@ -4,8 +4,6 @@ const ascOrder = document.getElementById("idOrder1to151");
 const descOrder = document.getElementById("idOrder151to1");
 const checkAtoZ = document.getElementById("alphOrderAtoZ");
 const checkZtoA = document.getElementById("alphOrderZtoA");
-let typeValue = pokeType.options[pokeType.selectedIndex].value;
-let weaknessValue = pokeWeakness.options[pokeWeakness.selectedIndex].value;
 const searchInput = document.getElementById("searchInput");
 // const sidebar = document.getElementById("sidebar");
 
@@ -71,6 +69,8 @@ function goPokemons(pokemonDataSource) {
    `
 };
 function typeList() {
+    let typeValue = pokeType.options[pokeType.selectedIndex].value;
+    let weaknessValue = pokeWeakness.options[pokeWeakness.selectedIndex].value;
     if (weaknessValue != "") {
         if (typeValue == '') {
             return weaknessList();
@@ -89,6 +89,8 @@ function typeList() {
     }
 };
 function weaknessList() {
+    let typeValue = pokeType.options[pokeType.selectedIndex].value;
+    let weaknessValue = pokeWeakness.options[pokeWeakness.selectedIndex].value;
     if (typeValue != "") {
         if (weaknessValue == '') {
             return typeList();
