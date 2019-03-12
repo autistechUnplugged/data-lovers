@@ -40,38 +40,6 @@ body {
     -webkit-box-shadow: 3px 3px 8px 2px rgba(34,26,26,0.70);
     -moz-box-shadow: 3px 3px 8px 2px rgba(34,26,26,0.70);
 
-<<<<<<< HEAD
-}
-
-.navigation {
-    margin-top: 24vh;
-    display: none;
-    flex-direction: column;
-}
-
-.pokedex-img {
-    width: 20vw;
-    height: 60vh;
-    opacity: 0.97;
-    filter: alpha(opacity=97); /* For IE8 and earlier */
-}
-
-.init {
-    font-family: 'VT323', monospace;
-    text-align: center;
-    font-size: 2.5em;
-}
-
-.init img {
-    height: 30vh;
-}
-
-.search-box {
-    display: flex;
-    justify-content: center;
-    padding: 0.3em;
-    margin: 1.6em 0em 0em 1.5em;
-=======
 }
 
 .navigation {
@@ -119,7 +87,6 @@ body {
     justify-content: center;
     padding: 0.3em;
     margin: 6em 0em 0em 1.5em;
->>>>>>> a2fbde534f8fa91c22c4d86bb744cd50e2e937ec
     border: none;
     width: 15vw;
     height: auto;
@@ -128,13 +95,10 @@ body {
     font-family: 'VT323', monospace;
 }
 
-<<<<<<< HEAD
-=======
 .bck {
     text-decoration: none;
 }
 
->>>>>>> a2fbde534f8fa91c22c4d86bb744cd50e2e937ec
 .opt {
     display: flex;
     justify-content: center;
@@ -183,11 +147,8 @@ body {
 .content {
     position: absolute;
     margin: 10vh 0vw 0vh 28vw;
-    overflow-y: auto;
-<<<<<<< HEAD
-=======
     width: 70vw;
->>>>>>> a2fbde534f8fa91c22c4d86bb744cd50e2e937ec
+    overflow-y: auto;
     height: 42vh;
     font-family: 'ZCOOL QingKe HuangYou', cursive;
     color: rgba(19, 18, 18, 0.92);
@@ -196,10 +157,6 @@ body {
 }
 
 .pokemon-list {
-<<<<<<< HEAD
-=======
-
->>>>>>> a2fbde534f8fa91c22c4d86bb744cd50e2e937ec
 }
 
 #eachPokemon {
@@ -239,14 +196,11 @@ body {
     margin-bottom: -5.3vh;
 }
 
-<<<<<<< HEAD
-=======
 .hold {
     display: flex;
     justify-content: space-evenly;
 }
 
->>>>>>> a2fbde534f8fa91c22c4d86bb744cd50e2e937ec
 .top {
     display: block;
 }
@@ -258,24 +212,42 @@ body {
     color: rgba(37, 36, 36, 0.75);
 }
 
-<<<<<<< HEAD
-.card-type {
+.card-weaknesses {
+    display: flex;
+    flex-direction: column;
+}
+
+.pokemon-weaknesses {
+    font-size: 0.9em;
+    margin-top: 1.5vh;
+}
+
+.sub-weak {
+    font-size: 0.8em;
+    color: rgba(37, 36, 36, 0.75);
+    margin-top: 0.1vh;
+    margin-left: 0.8vw;
 }
 
 .pokemon-type {
+    font-size: 1.1em;
 }
 
 .pokemon-weight {
-    
+    font-size: 1.1em;
 }
 
 .pokemon-height {
-    
+    font-size: 1.1em;
 }
 
 .info {
     display: inline-block;
-    margin-left: 1vw;
+}
+
+.hold {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .card-candy {
@@ -302,37 +274,6 @@ body {
     
 }
 
-=======
-.info {
-    display: inline-block;
-    margin-left: 1vw;
-}
-
-.card-candy {
-    margin-top: 4vh;
-    text-align: center;
-}
-
-.card-candy-evo {
-    margin-top: 1vh;
-    text-align: center;
-}
-
-.card-weaknesses {
-    margin-top: 4vh;
-}
-
-.sub-weak {
-    font-size: 0.8em;
-    color: rgba(37, 36, 36, 0.75);
-}
-
-.other {
-    display: none;
-    
-}
-
->>>>>>> a2fbde534f8fa91c22c4d86bb744cd50e2e937ec
 .other-btn {
     width: 20%;
     height: 3.5vh;
