@@ -11,11 +11,11 @@ O usuário do site pode ordenar os Pokémons por ordem numérica ou alfabética,
 Incluir personas
 
 ## Protótipo
-<img src="..cd/src/img/TelasPokemon/Prototipo-01.jpg" alt="Protótipo Tela inicial">
+<img src="../src/img/TelasPokemon/Prototipo-01.jpg" alt="Protótipo Tela inicial">
 
-<img src="..cd/src/img/TelasPokemon/Prototipo-04.jpg" alt="Protótipo ordenação alfabética">
+<img src="../src/img/TelasPokemon/Prototipo-04.jpg" alt="Protótipo ordenação alfabética">
 
-<img src="..cd/src/img/TelasPokemon/Prototipo-08.jpg" alt="Protótipo filtro Tipo Fire">
+<img src="../src/img/TelasPokemon/Prototipo-08.jpg" alt="Protótipo filtro Tipo Fire">
 
 
 
