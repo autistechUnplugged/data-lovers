@@ -11,20 +11,34 @@
   <body>
     <div class="flex">
       <header class="top">
-        <img src="https://data.whicdn.com/images/92521566/original.gif" class="logo" alt="logotipo">
+        <img src="https://fontmeme.com/permalink/190312/52e0d2988cf013facef82a7d2cd496fd.png" alt="pokemon-go-font" border="0">
       </header>
       <div class="wrap">
         <aside class="side">
           <nav class="menu" id="navbar">
-            <div class="opt">
-              <button id="wikio" class="btn">Curiosidades</button>
-            </div>
-            <div class="opt">
-              <button id="eggsy" class="btn">Lista de Eggs</button>
-            </div>
-            <div class="opt">
-              <button id="spawnTime" class="btn">Spawn</button> <!-- ícone de relógio? -->
-            </div>
+            <select class="filters" id="wikio">
+              <option value="" defaultSelected >Curiosidade</option>
+              <option value="typesCurio">Tipos</option>
+              <option value="weakCurio">Fraquezas</option>
+              <option value="weightCurio">Peso</option>
+              <option value="heightCurio">Altura</option>
+            </select>
+              <select class="filters" id="eggsy">
+                <option value="" defaultSelected >Eggs</option>
+                <option value="Not in Eggs">Not in Eggs</option>
+                <option value="2 km">2 km</option>
+                <option value="5 km">5 km</option>
+                <option value="7 km">7 km</option>
+                <option value="10 km">10 km</option>
+              </select>
+              <select class="filters" id="spawnTime">
+                <option value="" defaultSelected >Spawn</option>
+                <option value="08am">08:00</option>
+                <option value="12am">12:00</option>
+                <option value="18pm">18:00</option>
+                <option value="20pm">20:00</option>
+                <option value="00">00:00</option>
+              </select>
             <div>
                 <a href="index.html" class="bck"><button class="backBtn">Voltar</button></a>
               </div>
@@ -40,8 +54,8 @@
     </div>
     <script src="./data/pokemon/pokemon.js"></script>
     <!--  <script src="data.js"></script> -->
-    <!-- <script src="main.js"></script> -->
     <!-- colocar tudo no mesmo js? -->
+    <script src="main.js"></script>
     <script src="info.js"></script>
   </body>
 </html>
