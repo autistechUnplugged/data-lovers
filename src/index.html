@@ -3,22 +3,21 @@
   <head>
     <!-- melhorar isso aqui -->
     <meta charset="utf-8">
-    <title>< Pokédex ></title>
+    <title>< Pokélab ></title>
     <link rel="stylesheet" href="style.css" />
-    <!-- Trocar fontes se nao ficar boa no moz -->
     <link href="https://fonts.googleapis.com/css?family=VT323|ZCOOL+QingKe+HuangYou" rel="stylesheet">
   </head>
   <body>
     <div class="flex">
       <header class="top">
-        <img src="https://data.whicdn.com/images/92521566/original.gif" class="logo" alt="logotipo">
+        <img src="https://fontmeme.com/permalink/190312/52e0d2988cf013facef82a7d2cd496fd.png" alt="pokemon-go-font" border="0">
       </header>
       <div class="wrap">
         <aside class="side">
           <a href="#" id="sidebar"><img src="https://i.imgur.com/jC8dQD2.png" id="pokedex" class="pokedex-img" alt="closed pokedex"></a>
           <nav class="navigation" id="navbar">
             <div class="opt">
-              <!-- tentar ícones pra esse menu kkk -->
+              <!-- tentar ícones pra esse menu -->
               <button id="idOrder1to151" class="btn">ID - [menor para o maior]</button>
             </div>
             <div class="opt">
@@ -39,7 +38,7 @@
                 <option value="Ghost">Ghost</option>
                 <option value="Ground">Ground</option>
                 <option value="Normal">Normal</option>
-                <option value="Psychi">Psychic</option>
+                <option value="Psychic">Psychic</option>
                 <option value="Steel">Steel</option>
                 <option value="Dark">Dark</option>
                 <option value="Electric">Electric</option>
@@ -60,7 +59,7 @@
                   <option value="Ghost">Ghost</option>
                   <option value="Ground">Ground</option>
                   <option value="Normal">Normal</option>
-                  <option value="Psychi">Psychic</option>
+                  <option value="Psychic">Psychic</option>
                   <option value="Steel">Steel</option>
                   <option value="Dark">Dark</option>
                   <option value="Electric">Electric</option>
@@ -73,7 +72,7 @@
                   <option value="Water">Water</option>
               </select>
             <div class="search" id="searchName">
-              <input type="text" id="searching" class="search-box" placeholder="Insira o nome" onkeyup="filterSearch(this.value)"></input>
+              <input placeholder="Insira o nome" class="search-box" id="searching"></input>
             </div>
           </nav>
         </aside>
@@ -87,14 +86,11 @@
             <img src="https://i.imgur.com/Goh6Eib.gif">
             <h3>Clique na pokedex para começar!</h3>
         </section>
-        <section id="another" class="other">
-          <a href="wiki.html"><button class="other-btn">Curiosidades e +</button></a>
-        </section>
       </div>
     </div>
     <script src="./data/pokemon/pokemon.js"></script>
-    <!--  <script src="data.js"></script> -->
     <script src="main.js"></script>
-    <script src="info.js"></script>
+    <!--  <script src="data.js"></script> -->
+    <!-- <script src="info.js"></script> -->
   </body>
 </html>
