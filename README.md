@@ -15,9 +15,9 @@ O usuário do site pode ordenar os Pokémons por ordem numérica ou alfabética,
 ## Protótipo
 ![Protótipo Tela Inicial](https://github.com/alinecherez/data-lovers/blob/master/src/img/TelasPokemon/Prototipo-01.JPG)
 
-![Protótipo Sorting Alfabética](https://github.com/alinecherez/data-lovers/blob/master/srcimg/TelasPokemon/Prototipo-04.jpg)
+![Protótipo Sorting Alfabética](https://github.com/vonhappatsch/data-lovers/blob/master/src/img/Prototipo-04.JPG)
 
-![Protótipo Filtro Tipo Fire](https://github.com/alinecherez/data-lovers/blob/master/srcimg/TelasPokemon/Prototipo-08.jpg)
+![Protótipo Filtro Tipo Fire](https://github.com/vonhappatsch/data-lovers/blob/master/src/img/Prototipo-08.JPG)
 
 * [Protótipo marvel](https://marvelapp.com/b2i45c4/screen/53840968)
 
