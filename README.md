@@ -8,17 +8,16 @@ O usuário do site pode ordenar os Pokémons por ordem numérica ou alfabética,
 
 ## Público alvo
 
-![Primeira persona]("")
+![Primeira persona](https://github.com/vonhappatsch/data-lovers/blob/master/src/img/Persona1.png)
 
-![Segunda persona]("")
+![Segunda persona](https://github.com/vonhappatsch/data-lovers/blob/master/src/img/Persona2.png)
 
 ## Protótipo
-<img src="img/TelasPokemon/Prototipo-01.jpg" alt="Protótipo Tela inicial">
-![Protótipo Tela Inicial]("https://github.com/alinecherez/data-lovers/blob/master/src/img/TelasPokemon/Prototipo-01.JPG")
+![Protótipo Tela Inicial](https://github.com/alinecherez/data-lovers/blob/master/src/img/TelasPokemon/Prototipo-01.JPG)
 
-![Protótipo Ordenação Alfabética]("https://github.com/alinecherez/data-lovers/blob/master/srcimg/TelasPokemon/Prototipo-04.jpg")
+![Protótipo Sorting Alfabética](https://github.com/alinecherez/data-lovers/blob/master/srcimg/TelasPokemon/Prototipo-04.jpg)
 
-![Protótipo Filtro Tipo Fire]("https://github.com/alinecherez/data-lovers/blob/master/srcimg/TelasPokemon/Prototipo-08.jpg")
+![Protótipo Filtro Tipo Fire](https://github.com/alinecherez/data-lovers/blob/master/srcimg/TelasPokemon/Prototipo-08.jpg)
 
 * [Protótipo marvel](https://marvelapp.com/b2i45c4/screen/53840968)
 
