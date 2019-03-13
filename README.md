@@ -24,4 +24,4 @@ O usuário do site pode ordenar os Pokémons por ordem numérica ou alfabética,
 
 ## Experimente
 
-* [Clique aqui](https://vonhappatsch.github.io/data-lovers/)
+* [Clique aqui](https://vonhappatsch.github.io/data-lovers/src)
