@@ -9,13 +9,9 @@ const pokeWeakness = document.getElementById("pokeWeakness");
 const sidebar = document.getElementById("sidebar");
 const searchInput = document.getElementById("searching");
 
-window.onload = function () {
+window.onload = function() {
     goPokemons(pokemonData);
 };
-
-// function getPokemons() {
-//     return pokemonData;
-// };
 
 function goPokemons(pokemonData) {
     eachPokemon.innerHTML = `
@@ -63,15 +59,11 @@ function goPokemons(pokemonData) {
    `
 };
 
-
-// função searchbar
 function searching() {
     let searchValue = searchbar.value;
     
 };
 
-
-// função filtro
 function typeList() {
     let typeValue = pokeType.options[pokeType.selectedIndex].value;
     let weaknessValue = pokeWeakness.options[pokeWeakness.selectedIndex].value;
