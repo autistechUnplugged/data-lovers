@@ -6,6 +6,7 @@
     <title>
         < Pokélab>
     </title>
+    <link rel="stylesheet" href="normalize.css" />
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=VT323|ZCOOL+QingKe+HuangYou" rel="stylesheet">
 </head>
@@ -19,60 +20,62 @@
             <aside class="side">
                 <a href="#" id="sidebar"><img src="https://i.imgur.com/jC8dQD2.png" id="pokedex" class="pokedex-img" alt="closed pokedex"></a>
                 <nav class="navigation" id="navbar">
-                    <div class="opt">
-                        <button id="idOrder1to151" class="btn">ID - [menor para o maior]</button>
-                    </div>
-                    <div class="opt">
-                        <button id="idOrder151to1" class="btn">ID - [maior para menor]</button>
-                    </div>
-                    <div class="opt">
-                        <button id="alphOrderAtoZ" class="btn">Nomes - [A-Z]</button>
-                    </div>
-                    <div class="opt">
-                        <button id="alphOrderZtoA" class="btn">Nomes - [Z-A]</button>
-                    </div>
-                    <select class="filters" id="pokeType">
-                <option value="" defaultSelected >Tipos</option>
-                <option value="Bug">Bug</option>
-                <option value="Dragon">Dragon</option>
-                <option value="Fairy">Fairy</option>
-                <option value="Fire">Fire</option>
-                <option value="Ghost">Ghost</option>
-                <option value="Ground">Ground</option>
-                <option value="Normal">Normal</option>
-                <option value="Psychic">Psychic</option>
-                <option value="Steel">Steel</option>
-                <option value="Dark">Dark</option>
-                <option value="Electric">Electric</option>
-                <option value="Fighting">Fighting</option>
-                <option value="Flying">Flying</option>
-                <option value="Grass">Grass</option>
-                <option value="Ice">Ice</option>
-                <option value="Rock">Rock</option>
-                <option value="Poison">Poison</option>
-                <option value="Water">Water</option>
-              </select>
-                    <select class="filters" id="pokeWeakness">
-                  <option value="" defaultSelected >Fraquezas</option>
-                  <option value="Bug">Bug</option>
-                  <option value="Dragon">Dragon</option>
-                  <option value="Fairy">Fairy</option>
-                  <option value="Fire">Fire</option>
-                  <option value="Ghost">Ghost</option>
-                  <option value="Ground">Ground</option>
-                  <option value="Normal">Normal</option>
-                  <option value="Psychic">Psychic</option>
-                  <option value="Steel">Steel</option>
-                  <option value="Dark">Dark</option>
-                  <option value="Electric">Electric</option>
-                  <option value="Fighting">Fighting</option>
-                  <option value="Flying">Flying</option>
-                  <option value="Grass">Grass</option>
-                  <option value="Ice">Ice</option>
-                  <option value="Rock">Rock</option>
-                  <option value="Poison">Poison</option>
-                  <option value="Water">Water</option>
-              </select>
+                    <section class="menu">
+                        <div class="opt">
+                            <button id="idOrder1to151" class="btn">ID - [menor para o maior]</button>
+                        </div>
+                        <div class="opt">
+                            <button id="idOrder151to1" class="btn">ID - [maior para menor]</button>
+                        </div>
+                        <div class="opt">
+                            <button id="alphOrderAtoZ" class="btn">Nomes - [A-Z]</button>
+                        </div>
+                        <div class="opt">
+                            <button id="alphOrderZtoA" class="btn">Nomes - [Z-A]</button>
+                        </div>
+                        <select class="filters" id="pokeType">
+                            <option value="" defaultSelected >Tipos</option>
+                            <option value="Bug">Bug</option>
+                            <option value="Dragon">Dragon</option>
+                            <option value="Fairy">Fairy</option>
+                            <option value="Fire">Fire</option>
+                            <option value="Ghost">Ghost</option>
+                            <option value="Ground">Ground</option>
+                            <option value="Normal">Normal</option>
+                            <option value="Psychic">Psychic</option>
+                            <option value="Steel">Steel</option>
+                            <option value="Dark">Dark</option>
+                            <option value="Electric">Electric</option>
+                            <option value="Fighting">Fighting</option>
+                            <option value="Flying">Flying</option>
+                            <option value="Grass">Grass</option>
+                            <option value="Ice">Ice</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Poison">Poison</option>
+                            <option value="Water">Water</option>
+                        </select>
+                        <select class="filters" id="pokeWeakness">
+                            <option value="" defaultSelected >Fraquezas</option>
+                            <option value="Bug">Bug</option>
+                            <option value="Dragon">Dragon</option>
+                            <option value="Fairy">Fairy</option>
+                            <option value="Fire">Fire</option>
+                            <option value="Ghost">Ghost</option>
+                            <option value="Ground">Ground</option>
+                            <option value="Normal">Normal</option>
+                            <option value="Psychic">Psychic</option>
+                            <option value="Steel">Steel</option>
+                            <option value="Dark">Dark</option>
+                            <option value="Electric">Electric</option>
+                            <option value="Fighting">Fighting</option>
+                            <option value="Flying">Flying</option>
+                            <option value="Grass">Grass</option>
+                            <option value="Ice">Ice</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Poison">Poison</option>
+                            <option value="Water">Water</option>
+                        </select>
+                    </section>
                     <section class="search" id="searchName">
                         <input placeholder="Insira o nome" class="search-box" id="searching"></input>
                     </section>
