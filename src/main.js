@@ -9,11 +9,27 @@ const pokeWeakness = document.getElementById("pokeWeakness");
 const sidebar = document.getElementById("sidebar");
 const searchInput = document.getElementById("searching");
 
-window.onload = function() {
+
+const makeInvisible = () => {
+    const navbar = document.getElementById("navbar");
+    const pokedex = document.getElementById("pokedex");
+    const initial = document.getElementById("initial");
+    const another = document.getElementById("another");
+
+    pokedex.style.display = "none";
+    initial.style.display = "none";
+    navbar.style.display = "flex";
+    eachPokemon.style.display = "block";
+    another.style.display = "block";
+};
+
+
+
+window.onload = () => {
     goPokemons(pokemonData);
 };
 
-function goPokemons(pokemonData) {
+const goPokemons = (pokemonData) => {
     eachPokemon.innerHTML = `
     ${pokemonData.map(poke => `
         <div class="pokemon">
@@ -59,32 +75,50 @@ function goPokemons(pokemonData) {
    `
 };
 
-function searching() {
-    let searchValue = searchbar.value;
-    
-};
 
-function typeList() {
+const typeList = () => {
     let typeValue = pokeType.options[pokeType.selectedIndex].value;
     let weaknessValue = pokeWeakness.options[pokeWeakness.selectedIndex].value;
 
-    if (weaknessValue != "") {
+    if (weaknessValue !== '') {
         if (typeValue === '') {
             return weaknessList();
         }
-        
+
         let pokeType = pokemonData.filter(monster => monster.type.includes(typeValue));
         let pokeWeaknessAndType = pokeType.filter(monster => monster.weaknesses.includes(weaknessValue));
-
+        
         if (pokeWeaknessAndType === '') {
-            return eachPokemon.innerHTML = "<h1>Sem Pokémom</h1>";
+            return eachPokemon.innerHTML = "<h1>Sem Pokémon</h1>";
         }
         return goPokemons(pokeWeaknessAndType);
+
     } else {
         if (typeValue === '') {
             return goPokemons(pokemonData);
         }
         return goPokemons(pokemonData.filter(monster => monster.type.includes(typeValue)));
+    }
+};
+
+
+const foo = () => {
+    if (kindValue !== '') {
+        if (opposite === '') {
+            return kindValueList();
+        }
+
+        let pokeOpposite = pokemonData.filter(monster => monster.opposite.includes(oppositeValue));
+        let pokekindValueAndOpposite = pokeOpposite.filter(monster => monster.kind.includes(kindValue));
+
+        if (pokekindValueAndOpposite === '') {
+            return eachPokemon.innerHTML = "<h1>Sem Pokémon</h1>";
+        }
+        return goPokemons(pokekindValueAndOpposite);
+    } else {
+        if (opposite === '') {
+            return goPokemons(pokemonData);
+        } return goPokemons(pokemonData.filter(monster => monster.opposite.includes(oppositeValue)));
     }
 };
 
@@ -114,81 +148,47 @@ function weaknessList() {
 };
 
 
-function makeInvisible() {
-    const navbar = document.getElementById("navbar");
-    const pokedex = document.getElementById("pokedex");
-    const initial = document.getElementById("initial");
-    const another = document.getElementById("another");
-    pokedex.style.display = "none";
-    initial.style.display = "none";
-    navbar.style.display = "flex";
-    eachPokemon.style.display = "block";
-    another.style.display = "block";
-};
-
-
-function reset(){
+const reset = () => {
     document.getElementById("pokeType").selectedIndex = 0;
     document.getElementById("pokeWeakness").selectedIndex = 0;
 };
 
-function orderPokemonUp() {
+
+const orderPokemonUp = () => {
     reset();
     return goPokemons(
-        pokemonData.sort(function (a, b) {
+        pokemonData.sort((a, b) => {
             return a.num - b.num;
-        }));
+        })
+    );
 };
 
 
-function orderPokemonDown() {
+const orderPokemonDown = () => {
     reset();
     return goPokemons(
-        pokemonData.sort(function (a, b) {
+        pokemonData.sort((a, b) => {
             return b.num - a.num;
-        }));
-};
-
-
-function sortingPokemonsUp() {
-    reset();
-    return goPokemons(
-        pokemonData.sort(function (a, b) {
-            let nameA = a.name.toUpperCase();
-            let nameB = b.name.toUpperCase();
-            if (nameA < nameB) {
-                return -1;
-            }
-            if (nameA > nameB) {
-                return 1;
-            }
-            return 0;
         })
     );
 };
 
 
-function sortingPokemonsDown() {
+const sortingPokemonsUp = () => {
     reset();
-    return goPokemons(
-        pokemonData.sort(function (a, b) {
-            let nameA = a.name.toUpperCase();
-            let nameB = b.name.toUpperCase();
-            if (nameA < nameB) {
-                return 1;
-            }
-            if (nameA > nameB) {
-                return -1;
-            }
-            return 0;
-        })
-    );
+    return goPokemons(pokemonData.sort((a, b) => a.name.localeCompare(b.name)));
 };
 
 
-function searchPokemon() {
-    let searchWord = searchInput.value.toUpperCase();
-    let pokeName = pokemonData.filter(monster => monster.name.toUpperCase().includes(searchWord));
+const sortingPokemonsDown = () => {
+    reset();
+    return goPokemons(pokemonData.sort((a, b) => b.name.localeCompare(a.name)));
+};
+
+
+const searchPokemon = () => {
+    let searchValue = searchInput.value.toUpperCase();
+    let pokeName = pokemonData.filter(monster => monster.name.toUpperCase().includes(searchValue));
     return goPokemons(pokeName);
 };
 
